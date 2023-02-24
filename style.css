@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #292738;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 58px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+
+    margin: 0 auto;
+}
+
+.graficos {
+    display: flex;
+    flex-direction: row;
+    background-color: #363447;
+
+    padding: 20px;
+    box-shadow: 3px 4px 26px 0 rgb(0 0 0 / 25%);
+    border-radius: 16px;
+}
+
+.graf-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+
+    padding: 0 16px;
+}
+
+.graf-ellipse {
+    position: relative;
+    height: 150px;
+}
+
+.graf-ellipse > span {
+    position: absolute;
+    display: block;
+    right: -60%;
+    width: 160px;
+    height: 160px;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.graf-ellipse > span:nth-child(1) {
+    border: 20px solid #4A4556;
+}
+
+.graf-ellipse > span:nth-child(2) {
+    /* border-color: linear-gradient(to right, #CE9FFC, #7367F0); */
+    border: 20px solid transparent;
+}
+
+.porcentagem {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.porcentagem > span:nth-child(1) {
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.porcentagem > span:nth-child(2) {
+    font-size: 16px;
+}
+
+.graf-content > span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.emot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.emot > img {
+    width: 54px;
+}
+
+.emot > span {
+    color: #81FBB8;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.footer-graf {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-graf div {
+    display: flex;
+    gap: 8px;
+}
+
+.footer-graf span {
+    font-size: 14px;
+}
+
+.main {
+    padding: 29px 48px;
+    background-color: #363447;
+    box-shadow: 3px 4px 26px 0 rgb(0 0 0 / 25%);
+    border-radius: 16px;
+
+    display: grid;
+    grid-gap: 8px;
+    grid-template-areas: 
+    "head head" 
+    "content grafico";
+}
+
+.main > span {
+    grid-area: head;
+
+    font-size: 24px;
+    font-weight: bolder;
+    padding-bottom: 20px;
+}   
+
+.info-indice {
+    grid-area: content;
+}
+
+.info-indice > div {
+    display: grid;
+    gap: 5px;
+    grid-template-areas: "img dias" "semana semana";
+    grid-template-columns: 12px auto;
+    grid-template-rows: 18px auto;
+
+    font-size: 12px;
+    padding: 20px 0;
+}
+
+.info-indice > div > img {
+    grid-area: img;
+    width: 12px;
+}
+
+.info-indice > div > span:nth-child(2) {
+    grid-area: dias;
+}
+
+.info-indice > div > span:nth-child(3) {
+    grid-area: semana;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.graf-indice {
+    grid-area: grafico;
+}
